@@ -35,10 +35,25 @@ Bruker får bekreftelse
 
 ## Sikkerhet:
 SQL injection kan føre til datatap og uautorisert tilgang - et tiltak kan være parameterisert SQL (skiller kode fra inndata).
-**GDPR**
+**GDPR og personvern** - Systemet lagrer personopplysninger som navn, telefonnummer og e-postadresse.\
+
+I henhold til GDPR må:
+
+Brukeren informeres om hva dataene brukes til\
+Data ikke deles med tredjeparter uten samtykke\
+Persondata slettes når de ikke lenger er nødvendige
 
 
-## Forbredninger?
+
+## Forbredninger/videre utvikling
+Lagt til innlogging så bare administrator ser alle bookinger\
+
+Implementert automatisk e-postbekreftelse til kunden\
+
+Brukt HTTPS i produksjon for kryptert kommunikasjon\
+
+Lagt til mulighet for å avbestille eller endre booking\
+
 **Vipps** - Jeg vil at (client) skal kunne logge inn/lage bruker direkte med vipps, og dermed slippe å fylle det inn manuelt. 
 
 
