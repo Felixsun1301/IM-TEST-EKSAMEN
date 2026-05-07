@@ -1,4 +1,4 @@
-# FX Studios  - et bookingsystem for alle frisører
+# FX Studios  - 
 
 FX Studios – Bookingsystem
 Et nettbasert bookingsystem for frisørsalong, der kunder kan velge dato, tid og fylle inn kontaktinformasjon for å bestille time.
