@@ -29,4 +29,4 @@ Bruker → Frontend (HTML/CSS) → Backend (Flask) → Database (MariaDB) → Be
 - E-postbekreftelse til kunde
 - HTTPS i produksjon
 - Avbestilling og endring av booking
-- Vipps-innlogging så kunden slipper å fylle inn kontaktinfo manuelt
+
