@@ -1,59 +1,32 @@
-# FX Studios  - 
+# FX Studios – Bookingsystem
 
-FX Studios – Bookingsystem
-Et nettbasert bookingsystem for frisørsalong, der kunder kan velge dato, tid og fylle inn kontaktinformasjon for å bestille time.
+Et nettbasert bookingsystem for frisørsalong der kunder kan booke time på nett.
 
 ## Om prosjektet
-FX Studios er en frisørsalong som trenger en enkel og oversiktlig måte for kunder å booke time på nett. Systemet er bygget som en trinnvis bookingflyt der brukeren velger dato og tid, fyller inn navn, telefonnummer og e-post, og til slutt får en bekreftelse på bookingen.
+FX Studios er en frisørsalong som trenger en enkel måte for kunder å booke time på nett. Brukeren velger dato og tid, fyller inn kontaktinfo og får en bekreftelse på bookingen.
 
-## Teknologier brukt:
-**HTML**\
-**CSS**\
-**Python**\
-**Flask**\
-**MariaDB** - enkel databaseløsning for lagring av bookinger
+## Teknologier brukt
+- HTML
+- CSS
+- Python
+- Flask
+- MariaDB
 
-## Funksjonalitet:
-Velg ønsket dato fra ukeskalender
-Velg ledig tidspunkt (opptatte tider vises som utilgjengelige)
-Fyll inn kontaktinformasjon (navn, telefon, e-post)
-Bekreftelsesside med oppsummering av bookingen
-Mulighet for å starte ny booking
+## Funksjonalitet
+- Velg dato og tid
+- Fyll inn navn, telefon og e-post
+- Bekreftelsesside med oppsummering
 
+## Systemflyt
+Bruker → Frontend (HTML/CSS) → Backend (Flask) → Database (MariaDB) → Bekreftelse til bruker
 
-## Systemflyt:
-Bruker (klient)
-    ↓ sender forespørsel via nettleser
-Frontend (HTML/CSS/JS)
-    ↓ sender data til backend
-Backend (Flask)
-    ↓ lagrer og henter data
-Database (MariaDB)
-    ↓ returnerer bekreftelse
-Bruker får bekreftelse
+## Sikkerhet
+- Parameterisert SQL for å beskytte mot SQL injection
+- GDPR: brukeren informeres om hva dataene brukes til, data deles ikke med tredjeparter
 
-
-## Sikkerhet:
-SQL injection kan føre til datatap og uautorisert tilgang - et tiltak kan være parameterisert SQL (skiller kode fra inndata).
-**GDPR og personvern** - Systemet lagrer personopplysninger som navn, telefonnummer og e-postadresse.\
-
-I henhold til GDPR må:
-
-Brukeren informeres om hva dataene brukes til\
-Data ikke deles med tredjeparter uten samtykke\
-Persondata slettes når de ikke lenger er nødvendige
-
-
-
-## Forbredninger/videre utvikling
-Lagt til innlogging så bare administrator ser alle bookinger\
-
-Implementert automatisk e-postbekreftelse til kunden\
-
-Brukt HTTPS i produksjon for kryptert kommunikasjon\
-
-Lagt til mulighet for å avbestille eller endre booking\
-
-**Vipps** - Jeg vil at (client) skal kunne logge inn/lage bruker direkte med vipps, og dermed slippe å fylle det inn manuelt. 
-
-
+## Videre utvikling
+- Innlogging for administrator
+- E-postbekreftelse til kunde
+- HTTPS i produksjon
+- Avbestilling og endring av booking
+- Vipps-innlogging så kunden slipper å fylle inn kontaktinfo manuelt
