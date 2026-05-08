@@ -27,6 +27,5 @@ Bruker → Frontend (HTML/CSS) → Backend (Flask) → Database (MariaDB) → Be
 ## Videre utvikling
 - Innlogging for administrator
 - E-postbekreftelse til kunde
-- HTTPS i produksjon
 - Avbestilling og endring av booking
 
