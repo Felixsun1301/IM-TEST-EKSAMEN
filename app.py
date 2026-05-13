@@ -12,8 +12,8 @@ def get_db():
     )
          
 
-@app.route("/")
-def forside():
+@app.route("/booktime")
+def booktime():
     return render_template("booktime.html")
 
 @app.route("/book", methods=["POST"])
@@ -80,6 +80,48 @@ def bookinger():
     cursor.close()
     db.close()
     return render_template("bookinger.html", bookinger=alle)
+
+# Viser FAQ-siden med vanlige spørsmål
+@app.route("/faq")
+def faq():
+    return render_template("faq.html")
+
+# Tar imot spørsmål fra brukeren og lagrer i databasen
+@app.route("/send_sporsmal", methods=["POST"])
+def send_sporsmal():
+    navn = request.form.get("navn")
+    epost = request.form.get("epost")
+    sporsmal = request.form.get("sporsmal")
+
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute(
+        "INSERT INTO faq (navn, epost, sporsmal) VALUES (%s, %s, %s)",
+        (navn, epost, sporsmal)
+    )
+    db.commit()
+    cursor.close()
+    db.close()
+
+    return redirect("/faq")
+
+# Sletter alle spørsmål tilknyttet en e-post (GDPR)
+@app.route("/slett_data", methods=["POST"])
+def slett_data():
+    epost = request.form.get("epost")
+
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute(
+        "DELETE FROM faq WHERE epost = %s",
+        (epost,)
+    )
+    db.commit()
+    cursor.close()
+    db.close()
+
+    return redirect("/faq")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
