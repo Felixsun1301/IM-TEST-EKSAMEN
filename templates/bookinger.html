@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>FX Studios - Alle bookinger</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>FX Studios</h1>
+    <h2>Alle bookinger</h2>
+
+    <!-- Viser en melding hvis det ikke er noen bookinger -->
+    {% if not bookinger %}
+    <p>Ingen bookinger ennå.</p>
+
+    {% else %}
+
+    <!-- Tabell med alle bookinger fra databasen -->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Navn</th>
+            <th>Telefon</th> 
+            <th>E-post</th>
+            <th>Dato</th>
+            <th>Tid</th>
+        </tr>
+
+        <!-- Jinja2 løkke som går gjennom alle bookinger -->
+        {% for booking in bookinger %}
+        <tr>
+            <td>{{ booking[0] }}</td>
+            <td>{{ booking[1] }}</td>
+            <td>{{ booking[2] }}</td>
+            <td>{{ booking[3] }}</td>
+            <td>{{ booking[4] }}</td>
+            <td>{{ booking[5] }}</td>
+
+            
+        </tr>
+        {% endfor %}
+
+    </table>
+    {% endif %}
+
+    <a href="/">Tilbake til forsiden</a>
+
+</div>
+
+</body>
+</html>

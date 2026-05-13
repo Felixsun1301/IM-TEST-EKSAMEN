@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>FX Studios - Book time</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>FX Studios</h1>
+    <p>Frisørsalong i Oslo</p>
+
+    <h2>Book en time</h2>
+
+    <form action="/book" method="POST">
+
+        <label for="dato">Dato:</label>
+        <input type="date" id="dato" name="dato" required>
+
+        <label for="tid">Tid:</label>
+        <select id="tid" name="tid" required>
+            <option value="">Velg tid</option>
+            <option value="09:00">09:00</option>
+            <option value="09:30">09:30</option>
+            <option value="10:00">10:00</option>
+            <option value="10:30">10:30</option>
+            <option value="11:00">11:00</option>
+            <option value="11:30">11:30</option>
+            <option value="13:00">13:00</option>
+            <option value="13:30">13:30</option>
+            <option value="14:00">14:00</option>
+            <option value="14:30">14:30</option>
+            <option value="15:00">15:00</option>
+            <option value="15:30">15:30</option>
+            <option value="16:00">16:00</option>
+            <option value="16:30">16:30</option>
+            <option value="17:00">17:00</option>
+            <option value="17:30">17:30</option>
+        </select>
+
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn" placeholder="Felix Sun" required>
+
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="900 00 000" required>
+
+        <label for="epost">E-post:</label>
+        <input type="email" id="epost" name="epost" placeholder="felix@epost.no" required>
+
+        <button type="submit">Book time</button>
+
+    </form>
+    <a href="/admin">Admin innlogging</a>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>FX Studios - Admin innlogging</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>FX Studios</h1>
+    <p>Admin innlogging</p>
+
+    {% if feil %}
+    <p class="feil">{{ feil }}</p>
+    {% endif %}
+
+    <form action="/login" method="POST">
+
+        <label for="brukernavn">Brukernavn:</label>
+        <input type="text" id="brukernavn" name="brukernavn" required>
+
+        <label for="passord">Passord:</label>
+        <input type="password" id="passord" name="passord" required>
+
+        <button type="submit">Logg inn</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
