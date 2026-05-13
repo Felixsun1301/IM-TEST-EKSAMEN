@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>FX Studios - FAQ</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+ 
+<div class="container">
+    <h1>FX Studios</h1>
+    <h2>Vanlige spørsmål (FAQ)</h2>
+ 
+    <!-- Vanlige spørsmål og svar -->
+    <div class="faq-liste">
+ 
+        <div class="faq-element">
+            <h3>Hvordan booker jeg en time?</h3>
+            <p>Gå til forsiden, velg dato og tid, fyll inn kontaktinfo og trykk "Book time".</p>
+        </div>
+ 
+        <div class="faq-element">
+            <h3>Kan jeg avbestille en time?</h3>
+            <p>Ja, kontakt oss på telefon eller e-post så avbestiller vi timen for deg.</p>
+        </div>
+ 
+        <div class="faq-element">
+            <h3>Hvor holder FX Studios til?</h3>
+            <p>Vi holder til i Oslo. Ta kontakt for nøyaktig adresse.</p>
+        </div>
+ 
+        <div class="faq-element">
+            <h3>Hvordan behandles persondata?</h3>
+            <p>Vi lagrer kun navn, telefon og e-post for å bekrefte bookingen. Data deles ikke med tredjeparter, i henhold til GDPR.</p>
+        </div>
+ 
+        <div class="faq-element">
+            <h3>Hvordan kontakter jeg support?</h3>
+            <p>Send oss et spørsmål i skjemaet nedenfor så svarer vi deg så snart som mulig.</p>
+        </div>
+ 
+    </div>
+ 
+    <!-- Skjema for å sende inn spørsmål -->
+    <h2>Send inn et spørsmål</h2>
+    <form action="/send_sporsmal" method="POST">
+ 
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn" placeholder="Ola Nordmann" required>
+ 
+        <label for="epost">E-post:</label>
+        <input type="email" id="epost" name="epost" placeholder="ola@epost.no" required>
+ 
+        <label for="sporsmal">Spørsmål:</label>
+        <textarea id="sporsmal" name="sporsmal" rows="4" placeholder="Skriv spørsmålet ditt her..." required></textarea>
+ 
+        <button type="submit">Send spørsmål</button>
+ 
+    </form>
+ 
+    <!-- GDPR: Slett egne data -->
+    <h2>Slett mine data</h2>
+    <p>Skriv inn e-postadressen din for å slette alle spørsmål tilknyttet deg.</p>
+    <form action="/slett_data" method="POST">
+ 
+        <label for="slett_epost">E-post:</label>
+        <input type="email" id="slett_epost" name="epost" placeholder="ola@epost.no" required>
+ 
+        <button type="submit">Slett mine data</button>
+ 
+    </form>
+ 
+    <a href="/">Tilbake til forsiden</a>
+ 
+</div>
+ 
+</body>
+</html>
